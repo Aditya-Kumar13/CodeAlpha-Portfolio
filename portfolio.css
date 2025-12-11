@@ -3,8 +3,9 @@
     padding: 0;
     margin: 0;
     
-    font-family: Inter,sans-serif;
+    font-family: "Inter",sans-serif;
     text-decoration: none;
+    box-sizing: border-box;
 }
 html{
     scroll-behavior: smooth;
@@ -17,7 +18,6 @@ body{
 .page1{
     width: 100%;
     min-height: 100%;
-    background-color:;
     display: flex;
     position: relative;;
 }
@@ -39,7 +39,7 @@ nav h5{
     border-top: 0;
     border-left: 0;
     border-right: 0;
-    /*box-shadow: 0px 10px 20px rgba(66, 45, 223, 0.2);*/
+    
 }
 
 nav .logo{
@@ -162,10 +162,10 @@ nav .subnav .contact:hover:after{
 
 
 .left .btn{
-    width: 45%;
+    width: 55%;
     display: flex;
     margin-top: 40px;
-    justify-content: space-between;
+    
     gap: 25px;
 }
 .page1 .left button{
@@ -219,56 +219,53 @@ nav .subnav .contact:hover:after{
 
 .main-avatar {
     position: absolute;
-    height: 90vh;        /* Keeps him big */
+    height: 90vh;        
     width: 100%;
     object-fit: contain;
     object-position: bottom;
-    z-index: 1;          /* Sits behind the logos */
+    z-index: 1;          
     bottom: 0;
 }
 
 @keyframes float {
     0% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); } /* Moves up 20px */
+    50% { transform: translateY(-20px); } 
     100% { transform: translateY(0px); }
 }
 
-/* --- 3. Position the Logos --- */
-/* Common style for all logo wrappers */
+
 .floating-logo {
     position: absolute;
-    width: 80px;  /* Adjust size of icons here */
+    width: 80px;  
     height: 80px;
-    z-index: 2;   /* Sit on top of avatar */
-    animation: float 3s ease-in-out infinite; /* The floating magic */
+    z-index: 2;   
+    animation: float 3s ease-in-out infinite; 
 }
 
-/* Individual Positions (Creating an Arc) */
 
-/* React: Top Left */
 .reactpic {
     top: 20%;
     left: 20%;
     animation-delay: 0s;
 }
 
-/* HTML: Top Right */
+
 .htmlpic {
     top: 15%;
     right: 25%;
-    animation-delay: 1s; /* Delays start so they don't move together */
+    animation-delay: 1s; 
 }
 
-/* JS: Middle/Shoulder Left */
+
 .jspic {
     top: 40%;
     left: 5%;
-    width: 70px; /* Slightly smaller */
+    width: 70px; 
     height: 70px;
     animation-delay: 0.5s;
 }
 
-/* CSS: Middle/Shoulder Right */
+
 .csspic {
     top: 35%;
     right: 5%;
@@ -277,28 +274,28 @@ nav .subnav .contact:hover:after{
     animation-delay: 1.5s;
 }
 
-/* 1. React Glow (Blue) */
+
 .reactpic:hover img {
     filter: drop-shadow(0 0 15px #61dafb);
     transform: scale(1.1); /* Slight zoom */
     transition: all 0.3s ease;
 }
 
-/* 2. HTML Glow (Orange) */
+
 .htmlpic:hover img {
     filter: drop-shadow(0 0 15px #e34c26);
     transform: scale(1.1);
     transition: all 0.3s ease;
 }
 
-/* 3. CSS Glow (Blue) */
+
 .csspic:hover img {
     filter: drop-shadow(0 0 15px #264de4);
     transform: scale(1.1);
     transition: all 0.3s ease;
 }
 
-/* 4. JS Glow (Yellow) */
+
 .jspic:hover img {
     filter: drop-shadow(0 0 15px #f7df1e);
     transform: scale(1.1);
@@ -364,8 +361,8 @@ nav .subnav .contact:hover:after{
 
 .tech {
     padding-top: 2%;
-    /*background-color: #0f172a;*/
-    height: 30vh; /* Changed to vh for better visualization */
+    
+    height: 30vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -374,19 +371,19 @@ nav .subnav .contact:hover:after{
 .marque {
     width: 100%;
     background-color: #f7df1e;
-    overflow: hidden; /* Crucial: Hides the text sliding out */
-    white-space: nowrap; /* Keeps items in one line */
+    overflow: hidden; 
+    white-space: nowrap; 
     rotate: 2deg;
     border: 3px black dotted;
     border-left: 0;
     border-right:0 ;
 }
 
-/* This is the track that actually moves */
+
 .move-container {
     display: flex;
-    gap: 2vw; /* Use vw for responsive gaps */
-    width: fit-content; /* Ensure it takes up necessary space */
+    gap: 2vw; 
+    width: fit-content; 
 }
 
 .move {
@@ -395,7 +392,7 @@ nav .subnav .contact:hover:after{
     justify-content: center;
     gap: 15px;
     flex-shrink: 0;
-     /* Prevents items from getting squished */
+     
 }
 
 .marque h1 {
@@ -470,8 +467,12 @@ nav .subnav .contact:hover:after{
     padding: 10px 20px;
     border-radius: 10px;
     border-color: transparent;
+    color: black;
 }
 
+.project1 a{
+    color: black;
+}
 
 
 .project2{
@@ -531,6 +532,7 @@ nav .subnav .contact:hover:after{
     transition: all 0.5s ease-out;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
 }
+
 
 .page4 button{
     background-color: transparent;
@@ -629,11 +631,19 @@ footer .heroline{
     margin-left: 113px;
 }
 
+footer .right a{
+    color: white;
+}
+
 .heroline .name{
     display: flex;
     gap: 4px;
     align-items: center;
     font-weight: 300;
+}
+
+.line{
+    padding-right: 50px; color: gray; font-weight: 300;
 }
 
 .magic{
@@ -669,6 +679,157 @@ footer .heroline{
 
 footer .container11 h1{
     color: white;
-    font-size: 185px;
+    font-size: clamp(0.5rem, 10vw, 12rem);
 }
 
+
+  
+
+@media screen and (max-width: 1024px) {
+    
+    
+    .page1 nav {
+        height: auto !important;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 0;
+        position: relative; 
+        background-color: #f8fafc;
+    }
+    nav .logo { width: 100%; justify-content: center; margin-left: 0; margin-bottom: 15px; }
+    .page1 nav .subnav { width: 100%; justify-content: center; gap: 20px; font-size: 1rem; }
+
+    
+    .page1 {
+        flex-direction: column-reverse;
+        height: auto !important;
+        padding-bottom: 50px;
+        width: 100vw !important;
+    }
+    .page1 .left { width: 100%; padding: 40px 20px; text-align: center; }
+    .page1 .left h1 { font-size: 2.5rem; line-height: 1.2; }
+    .left .btn { width: 100%; justify-content: center; }
+    .page1 .right { width: 100%; height: 50vh; }
+    
+    
+    .floating-logo { width: 50px; height: 50px; }
+    .reactpic { top: 10%; left: 10%; }
+    .htmlpic { top: 10%; right: 10%; }
+    .jspic { top: 60%; left: 5%; }
+    .csspic { top: 60%; right: 5%; }
+
+    
+    .page2 {
+        
+        height: 40vh !important; 
+        min-height: 250px;
+        
+        
+        display: none !important;
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center;     
+        
+        padding: 0 20px;         
+        white-space: normal !important; 
+        
+    }
+
+    .page2 h1 {
+        font-size: 12vw !important;  
+        line-height: 1.2;
+        text-align: center;
+        width: 100%;
+        -webkit-text-stroke: 1px #0f172a; 
+    }
+    
+
+    .page3 {
+        height: auto !important; 
+        padding-bottom: 50px;
+    }
+    .page3 .aboutme { 
+        width: 90%; 
+        margin: 0 auto; 
+        padding-top: 20px; 
+    }
+    .section-title { font-size: 2.2rem; }
+    .page3 p { text-align: left; font-size: 1rem; line-height: 1.6; }
+    
+    
+    .tech { height: auto; padding: 40px 0; }
+    .marque h1 { font-size: 8vw; }
+    .marque img { height: 6vw; }
+
+    
+    .page4 { height: auto !important; padding-bottom: 50px;max-width: 100vw; }
+    .page4 .stringeffect { width: 95%; overflow: hidden; }
+    .page4 .stringeffect svg { width: 100%; height: auto; }
+
+    
+    
+    .projecthero { height: auto; padding: 0; }
+    .project1, .project2, .project3 { 
+        flex-direction: column; 
+        height: auto; 
+        text-align: center; 
+        padding: 25px 15px; 
+        gap: 15px; 
+    }
+
+    
+    footer .info { flex-direction: column; height: auto; background-color: black  ;width: 100%;}
+    footer .left, footer .right { width: 100vw; text-align: center; padding-left: 0;flex-direction: column; height: auto ;background-color: black; }
+    footer .heroline { flex-direction: column; gap: 10px; margin-left: 0; text-align: center; padding-right: 0 !important;background-color: black; justify-content: center;align-items: center;  }
+    footer .contact-sub{
+        padding-left: 0;
+        margin: 0;
+    }
+    footer .left h2 {
+        padding-left: 0;
+    }
+
+    .line{
+        padding: 0;
+    }
+
+    footer .left p {
+        padding-left: 0;
+    }
+    footer .name{
+        display: flex;
+        flex-direction: column;
+        background-color: black;
+    }
+    
+    .magic {
+        height: auto !important;
+        padding: 50px 0;
+        background-color: black;
+    }
+    
+    .container11 {
+        height: auto !important;
+        width: 100%;
+        overflow: visible !important; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 0;
+    }
+
+    .container11 h1 {
+        font-size: 2rem !important;
+        white-space: nowrap ; 
+        text-align: center;
+        line-height: 1;
+        margin: 0;
+    }
+
+    
+    .cursor { display: none !important; }
+    footer .container11 h1{
+    color: white;
+    font-size: 85px;
+}
+}
