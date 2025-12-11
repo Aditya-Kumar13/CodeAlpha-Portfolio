@@ -224,7 +224,6 @@ t3.from(".page3 .section-title", {
 });
 
 t3.from(".page3 .paragraph", {
-    x: 100,     
     opacity: 0,
     duration: 2   
 });
@@ -274,6 +273,7 @@ var t5=gsap.timeline({
         start:"top 90%",
         end:"top 70%",
         scrub:3,
+        
     }
 })
 
@@ -282,4 +282,3 @@ t5.from(".page5",{
     
     duration:1
 })
-
