@@ -269,16 +269,17 @@ t4.from(".page4 .project3",{
 
 var t5=gsap.timeline({
     scrollTrigger:{
-        scroll:"body",
+        scroller:"body",
         trigger:".page5",
         start:"top 90%",
         end:"top 70%",
         scrub:3,
-        markers:true,
     }
 })
 
 t5.from(".page5",{
     y:180,
+    
     duration:1
 })
+
