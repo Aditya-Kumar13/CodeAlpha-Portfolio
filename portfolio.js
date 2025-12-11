@@ -1,4 +1,3 @@
-console.log("Aditya")
 
 var t1=gsap.timeline()
 
@@ -86,7 +85,6 @@ gsap.to(".page2 h1",{
         start:"top 0%",
         end:"top -100%",
         scrub:3,
-        markers:true,
         pin:true,
     }
 })
@@ -94,30 +92,20 @@ gsap.to(".page2 h1",{
 
 gsap.to(".move-container", {
     xPercent: -50, 
-    duration: 10, // Adjust speed here (higher is slower)
+    duration: 10, 
     repeat: -1,
     ease: "none",
 });
 
-// 2. Wheel Event
 window.addEventListener("wheel", function(movement) {
     
-    // Check if scrolling down (deltaY > 0)
     if (movement.deltaY > 0) {
-        // Rotate arrow 180 degrees (Note the 'deg')
-        // I targeted '.move img' because '.page3' was missing in your HTML
         gsap.to(".move img", {
             rotate: 270, 
             duration: 0.5
         });
-        
-
-
-        // OPTIONAL: If you want to reverse the marquee on scroll
-        // gsap.to(".move-container", { timeScale: 1, duration: 1 });
 
     } else {
-        // Reset rotation
         gsap.to(".move img", {
             rotate: 90,
             duration: 0.5
@@ -125,8 +113,6 @@ window.addEventListener("wheel", function(movement) {
         
 
 
-        // OPTIONAL: If you want to reverse the marquee on scroll
-        // gsap.to(".move-container", { timeScale: -1, duration: 1 });
     }
 });
 
@@ -164,7 +150,6 @@ cont.addEventListener("mousemove",function(movement){
     var rect = cont.getBoundingClientRect();
     curs.style.display="flex";
 
-    // 2. Calculate x/y inside the box (Mouse Global - Box Star
     curs.style.left=(movement.x- rect.left)+"px" ;
     curs.style.top=(movement.y- rect.top)+"px";
 })
@@ -214,8 +199,6 @@ var cursor = document.querySelector(".cursor")
 conter.addEventListener("mousemove",function(movement){
     var rection = conter.getBoundingClientRect();
 
-
-    // 2. Calculate x/y inside the box (Mouse Global - Box Star
     cursor.style.left=(movement.x- rection.left)+"px" ;
     cursor.style.top=(movement.y- rection.top)+"px";
 })
@@ -224,31 +207,26 @@ conter.addEventListener("mousemove",function(movement){
 
 var t3 = gsap.timeline({
     scrollTrigger: {
-        trigger: ".page3 ",  // Triggers when the Title "PROJECTS" enters
+        trigger: ".page3 ",  
         scroller: "body",
         
-        // FIXED: Start at Middle (50%) -> End at Top (0%)
-        // This gives you plenty of room to see the animation
         start: "top 50%", 
         end: "top 15%",    
         
-        scrub: 2, // Smooths the movement
-        markers: true // Keep this on to debug!
+        scrub: 2, 
     }
 });
 
 t3.from(".page3 .section-title", {
-    x: -100,      // Increased distance so movement is obvious
+    x: -100,      
     opacity: 0,
-    duration: 0.8   // Duration just sets the "ratio" of movement, not real time
-    // REMOVED: delay: 5 (This was the killer)
+    duration: 0.8   
 });
 
 t3.from(".page3 .paragraph", {
-    x: 100,      // Increased distance so movement is obvious
+    x: 100,     
     opacity: 0,
-    duration: 2   // Duration just sets the "ratio" of movement, not real time
-    // REMOVED: delay: 5 (This was the killer)
+    duration: 2   
 });
 
 
@@ -259,7 +237,7 @@ var t4 =gsap.timeline({
         start:"top 50%",
         end:"top 15%",
         scrub:2,
-        markers:true
+        
     }
 })
 
@@ -285,4 +263,22 @@ t4.from(".page4 .project3",{
     x:-50,
     opacity:0,
     duration:2
+})
+
+
+
+var t5=gsap.timeline({
+    scrollTrigger:{
+        scroll:"body",
+        trigger:".page5",
+        start:"top 90%",
+        end:"top 70%",
+        scrub:3,
+        markers:true,
+    }
+})
+
+t5.from(".page5",{
+    y:180,
+    duration:1
 })
