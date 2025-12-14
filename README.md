@@ -51,21 +51,3 @@ Open index.html in your browser.
 🤝 Contact
 Aditya Kumar LinkedIn | GitHub
 
-
-License: MIT
-
-
----
-
-### **One Last Thing to Do**
-
-Since the README now says: *"For deeper customization... please check the comments inside `portfolio.js`"*, you should add **one comment** to the top of your `portfolio.js` file so that statement is true.
-**Add this to the very top of `portfolio.js`:**
-```javascript
-/* PORTFOLIO CONFIGURATION
-   -----------------------
-   1. To change the "String" elasticity, look for ease: "elastic.out(1,0.2)"
-   2. To change the "Marquee" speed, adjust duration: 10 in the .move-container tween.
-   3. To change scroll speeds, adjust scrub: 2 or scrub: 3 in ScrollTriggers.
-*/
-Now your project is fully documented and professional! 🚀
